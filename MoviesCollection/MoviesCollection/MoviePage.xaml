@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoviesCollection.MoviePage" Title="Добавление фильма">
+    <StackLayout>
+        <Label Text="Название" />
+        <Entry Text="{Binding Name}" TextChanged="Name_TextChanged"/>
+        <Label Text="Описание" />
+        <Entry Text="{Binding Description}" />
+        <Label Text="Жанр" />
+        <ScrollView Orientation="Horizontal">
+            <StackLayout x:Name="GenresStackLayout" Orientation="Horizontal" >
+                <Button x:Name="AddGenreBtn" Text="Добавить" Clicked="AddGenre"/>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout Orientation="Horizontal">
+            <Button x:Name="SaveBtn" Text="Сохранить" Clicked="SaveMovie" />
+            <Button x:Name="DeleteBtn" Text="Удалить" Clicked="DeleteMovie" />
+            <Button Text="Назад" Clicked="Cancel" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
